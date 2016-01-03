@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int times;
+  cout<<"一共要认几个音？   ";
+  cin>>times;
+  
+  char clef;
+  int linenum,space,num;
+
+  cout<<"谱号(GKF), line num(-3~7) is it on a line (0,1)"<<endl;
+  cin>>clef;
+  cin>>linenum;
+  cin>>space;
+
+  char gname[22]={'E','F','G','A','B','C','D','E','F','G','A','B','C','D','E','F','G','A','B','C','D','E'};
+  char kname[22]={'F','G','A','B','C','D','E','F','G','A','B','C','D','E','F','G','A','B','C','D','E','F'};
+  char dname[22]={'G','A','B','C','D','E','F','G','A','B','C','D','E','F','G','A','B','C','D','E','F',};
+
+  if(times>1)
+    {
+  for(int i=0;i<times;i++)
+    {
+      num=linenum+3;
+      if(clef=='G'||clef=='g')
+	cout<<gname[(2*num)+space]<<endl;
+      else if(clef=='K'||clef=='k')
+	cout<<kname[(2*num)+space]<<endl;
+      else if(clef=='D'||clef=='d')
+	cout<<dname[(2*num)+space]<<endl;
+      else
+	{cout<<"There is an error! "<<endl;
+	  break;}
+      if(i<times-1){
+      cout<<"\nEnter the next note infomation:"<<endl;
+      //cout<<"\n";s
+      cout<<"note line number(-3,7) is on line (1,0)"<<endl;
+      cin>>linenum;
+      cin>>space;
+      }
+    }
+    }
+  else
+    {
+num=linenum+3;
+      if(clef=='G'||clef=='g')
+	cout<<gname[(2*num)+space]<<endl;
+      else if(clef=='K'||clef=='k')
+	cout<<kname[(2*num)+space]<<endl;
+      else if(clef=='D'||clef=='d')
+	cout<<dname[(2*num)+space]<<endl;
+      else
+	cout<<"There is an error! "<<endl;
+    }
+  return 0;
+}

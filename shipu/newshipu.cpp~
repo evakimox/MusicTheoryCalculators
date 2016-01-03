@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+  cout<<"Name to position on the stave (0) or Position on the stave to name(1)?     ";
+  bool direction;
+  cin>>direction;
+
+
+  if (direction)
+    {
+      //run the previous method
+    }
+  else
+    {
+      //run the unwritten method
+    }
+  return 0;
+}
+
+string n2p()
+{
+  string gp[7]={"下加二线，第二间，上加一线","下加二间","下加一线","下加一间","第一线","第一间","第二线"};
+  string kp[7]={"","","第3线","","","",""};
+  string fp[7]={"","","","第3线","","",""};
+
+  
+}
